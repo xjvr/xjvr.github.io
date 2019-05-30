@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://jianwei.ren/"/>
   <updated>2019-05-29T06:13:32.488Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://jianwei.ren/</id>
   
   <author>
     <name>Jianwei</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2019/05/29/hello-world/"/>
-    <id>http://yoursite.com/2019/05/29/hello-world/</id>
+    <link href="http://jianwei.ren/2019/05/29/hello-world/"/>
+    <id>http://jianwei.ren/2019/05/29/hello-world/</id>
     <published>2019-05-29T06:13:32.488Z</published>
     <updated>2019-05-29T06:13:32.488Z</updated>
     
