@@ -1290,3 +1290,6 @@ header label {
 .highlight .code .emphasis {
   font-style: italic;
 }
+.hexo-douban-active {
+  color: #fff !important;
+}

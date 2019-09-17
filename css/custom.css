@@ -1,0 +1,4 @@
+/* 修复豆瓣插件样式 */
+.hexo-douban-active {
+  color: #fff !important;
+}
