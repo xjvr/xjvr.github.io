@@ -1,4 +1,9 @@
-/* 修复豆瓣插件样式 */
 .hexo-douban-active {
   color: #fff !important;
+}
+.hexo-douban-button:hover {
+  color: #fff !important;
+}
+#mobile-toggle-theme {
+  color: #2d96bd;
 }

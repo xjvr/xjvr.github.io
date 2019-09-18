@@ -8,7 +8,7 @@
 
 
 
-<title>This is my movie title | Jianwei&#39;s Studio</title>
+<title>Movies | Jianwei&#39;s Studio</title>
 
 
 
@@ -112,11 +112,11 @@
             <div class="container">
     <article class="post-wrap page">
         
-        <h2 class="post-title">This is my movie title</h2>
+        <h2 class="post-title">Movies</h2>
         
         <section class="post-content">
             <blockquote>
-    <p>This is my movie quote</p>
+    <p>“时光流逝，我对你的爱却与日俱增。”</p>
 </blockquote>
 
 <style>
@@ -205,7 +205,7 @@
         (8)</a>
     <a class="hexo-douban-tab" id="hexo-douban-tab3" href="javascript:;" rel="external">
         已看
-        (94)</a>
+        (95)</a>
 </div>
 <div>
     <div id="hexo-douban-item1">
@@ -337,6 +337,19 @@
 </div>
     </div>
     <div id="hexo-douban-item3">
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p480383375.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title">
+            <a target="_blank" href="https://movie.douban.com/subject/1780330/">致命魔术 / The Prestige</a>
+        </div>
+        <div class="hexo-douban-meta">2019-09-18 /  /  </div>
+        <div class="hexo-douban-comments"> </div>
+    </div>
+</div>
+
+
         
         <div class="hexo-douban-item">
     <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2453814101.jpg" referrerpolicy="no-referrer"></div>
@@ -1624,6 +1637,7 @@ function firstBtn() {
     var sibs = this.parentNode.siblings();
     displayPage(sibs, 0);
     this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(0, sibs);
+    scrollTo(0,0);
 }
 
 function previousBtn() {
@@ -1636,6 +1650,7 @@ function previousBtn() {
     }
     displayPage(sibs, currNum);
     this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(currNum, sibs);
+    scrollTo(0,0);
 }
 
 function nextBtn() {
@@ -1648,12 +1663,14 @@ function nextBtn() {
     }
     displayPage(sibs, currNum);
     this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(currNum, sibs);
+    scrollTo(0,0);
 }
 
 function lastBtn() {
     var sibs = this.parentNode.siblings();
     displayPage(sibs, Math.ceil(sibs.length / 10) - 1);
     this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(Math.ceil(sibs.length / 10) - 1 === -1 ? 0 : Math.ceil(sibs.length / 10) - 1, sibs);
+    scrollTo(0,0);
 }
 
 function displayPage(arr, num) {

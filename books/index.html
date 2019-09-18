@@ -8,7 +8,7 @@
 
 
 
-<title>This is my book title | Jianwei&#39;s Studio</title>
+<title>Books | Jianwei&#39;s Studio</title>
 
 
 
@@ -112,11 +112,11 @@
             <div class="container">
     <article class="post-wrap page">
         
-        <h2 class="post-title">This is my book title</h2>
+        <h2 class="post-title">Books</h2>
         
         <section class="post-content">
             <blockquote>
-    <p>This is my book quote</p>
+    <p>“这一生的意义，究竟是在这万千霓虹的广厦中，还是在你的眉眼间？”</p>
 </blockquote>
 
 <style>
@@ -722,6 +722,7 @@ function firstBtn() {
     var sibs = this.parentNode.siblings();
     displayPage(sibs, 0);
     this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(0, sibs);
+    scrollTo(0,0);
 }
 
 function previousBtn() {
@@ -734,6 +735,7 @@ function previousBtn() {
     }
     displayPage(sibs, currNum);
     this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(currNum, sibs);
+    scrollTo(0,0);
 }
 
 function nextBtn() {
@@ -746,12 +748,14 @@ function nextBtn() {
     }
     displayPage(sibs, currNum);
     this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(currNum, sibs);
+    scrollTo(0,0);
 }
 
 function lastBtn() {
     var sibs = this.parentNode.siblings();
     displayPage(sibs, Math.ceil(sibs.length / 10) - 1);
     this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(Math.ceil(sibs.length / 10) - 1 === -1 ? 0 : Math.ceil(sibs.length / 10) - 1, sibs);
+    scrollTo(0,0);
 }
 
 function displayPage(arr, num) {
