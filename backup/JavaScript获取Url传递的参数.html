@@ -110,37 +110,11 @@
 </script>
         <div class="main">
             <div class="container">
-    
-    
-
-    
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">JavaScript获取Url传递的参数</h1>
-            
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">Jianwei</a>
-                    
-
-                    
-                        <span class="post-time">
-                        Date: <a href="#">September 17, 2019&nbsp;&nbsp;15:57:31</a>
-                        </span>
-                    
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/categories/JavaScript/">JavaScript</a>
-                            
-                        </span>
-                    
-                </div>
-            
-        </header>
-
-        <div class="post-content">
+    <article class="post-wrap page">
+        
+        <h2 class="post-title">JavaScript获取Url传递的参数</h2>
+        
+        <section class="post-content">
             <p>方法一、正则表达式</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getQueryString</span>(<span class="params">name</span>) </span>&#123; </span><br><span class="line">    <span class="keyword">var</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"(^|&amp;)"</span> + name + <span class="string">"=([^&amp;]*)(&amp;|$)"</span>, <span class="string">"i"</span>); </span><br><span class="line">    <span class="keyword">var</span> r = <span class="built_in">window</span>.location.search.substr(<span class="number">1</span>).match(reg); </span><br><span class="line">    <span class="keyword">if</span> (r != <span class="literal">null</span>) <span class="keyword">return</span> <span class="built_in">unescape</span>(r[<span class="number">2</span>]); </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>方法二</p>
@@ -155,62 +129,7 @@
 <p>//设置或获取 location 或 URL 的 hostname 和 port 号码。<br><code>alert(window.location.host);</code></p>
 <p>//设置或获取 href 属性中跟在问号后面的部分。<br><code>alert(window.location.search);</code></p>
 
-        </div>
-
-        
-            <section class="post-copyright">
-                
-                    <p class="copyright-item">
-                        <span>Author:</span>
-                        <span>Jianwei</span>
-                    </p>
-                
-                
-                    <p class="copyright-item">
-                        <span>Permalink:</span>
-                        <span><a href="http://jianwei.ren/2019/09/17/JavaScript获取Url传递的参数/">http://jianwei.ren/2019/09/17/JavaScript获取Url传递的参数/</a></span>
-                    </p>
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
-                     <p class="copyright-item">
-                         <span>Slogan:</span>
-                         <span>Do you believe in <strong>DESTINY<strong>?</strong></strong></span>
-                     </p>
-                
-
-            </section>
-        
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                    
-                        <a href="/tags/JavaScript/"># JavaScript</a>
-                    
-                        
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/">home</a>
-            </div>
         </section>
-        <section class="post-nav">
-            
-            
-            <a class="next" rel="next" href="/2019/09/17/JavaScript正则表达式验证/">JavaScript正则表达式验证</a>
-            
-        </section>
-
-
     </article>
 </div>
 
