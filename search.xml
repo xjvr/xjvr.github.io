@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>NavigationDuplicated 记一次Vue Router报错及解决</title>
+      <link href="/2019/12/14/NavigationDuplicated-%E8%AE%B0%E4%B8%80%E6%AC%A1Vue-Router%E6%8A%A5%E9%94%99%E5%8F%8A%E8%A7%A3%E5%86%B3/"/>
+      <url>/2019/12/14/NavigationDuplicated-%E8%AE%B0%E4%B8%80%E6%AC%A1Vue-Router%E6%8A%A5%E9%94%99%E5%8F%8A%E8%A7%A3%E5%86%B3/</url>
+      
+        <content type="html"><![CDATA[<h3 id="触发情况"><a href="#触发情况" class="headerlink" title="触发情况"></a>触发情况</h3><p>使用<code>$ router.push</code>更改“页面”。如果使用同一页面，则<code>vue-router</code>会引发错误。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error: Uncaught (in promise) NavigationDuplicated &#123;_name: &quot;NavigationDuplicated&quot;...&#125;</span><br></pre></td></tr></table></figure><h3 id="重现"><a href="#重现" class="headerlink" title="重现"></a>重现</h3><p>演示地址：<a href="https://codesandbox.io/s/vue-template-i2d63" target="_blank" rel="noopener">https://codesandbox.io/s/vue-template-i2d63</a></p><h3 id="寻求原因"><a href="#寻求原因" class="headerlink" title="寻求原因"></a>寻求原因</h3><p>经过多方查找&amp;实践，发现是vue-router的版本问题引起的。</p><p><a href="https://github.com/vuejs/vue-router/releases" target="_blank" rel="noopener">vue-router的更新日志</a>显示 v3.1.0 版本的路由跳转改用了 promise 的方式，针对于路由跳转相同的地址，如果没有捕获到错误，控制台始终会出现上面的错误</p><p>下方是<a href="https://github.com/vuejs/vue-router/commit/d907a13" target="_blank" rel="noopener">vue-router v3.1.0 的更改记录</a>，感兴趣的可以看一下</p><p><img src="https://i.loli.net/2019/12/14/R18IHpTBnVMoKQm.png" alt="更改记录"></p><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><h4 id="1-vue-router降级，安装v3-0-x版本"><a href="#1-vue-router降级，安装v3-0-x版本" class="headerlink" title="1. vue-router降级，安装v3.0.x版本"></a>1. vue-router降级，安装v3.0.x版本</h4><p>演示地址：<a href="https://codesandbox.io/s/vue-template-qvrfr" target="_blank" rel="noopener">https://codesandbox.io/s/vue-template-qvrfr</a></p><h4 id="2-在-import-Router-from-‘vue-router’-后引入如下代码"><a href="#2-在-import-Router-from-‘vue-router’-后引入如下代码" class="headerlink" title="2. 在 import Router from ‘vue-router’ 后引入如下代码"></a>2. 在 import Router from ‘vue-router’ 后引入如下代码</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> originalPush = Router.prototype.push</span><br><span class="line">Router.prototype.push = <span class="function"><span class="keyword">function</span> <span class="title">push</span>(<span class="params">location</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> originalPush.call(<span class="keyword">this</span>, location).catch(<span class="function"><span class="params">err</span> =&gt;</span> err)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>演示地址：<a href="https://codesandbox.io/s/vue-template-5owp6" target="_blank" rel="noopener">https://codesandbox.io/s/vue-template-5owp6</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vue </tag>
+            
+            <tag> Vue-router </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>常用Git命令总结</title>
       <link href="/2019/12/14/%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/"/>
       <url>/2019/12/14/%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</url>
