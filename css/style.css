@@ -877,14 +877,25 @@ header label {
   cursor: zoom-in;
 }
 .post-content blockquote {
+  text-indent: 2em;
+  position: relative;
+  margin: 20px 0;
   font-size: 1rem;
   display: block;
-  margin: 1em 0;
-  padding: 1em 1.2em 1em 1.2em;
-  position: relative;
-  color: rgba(52,73,94,0.8);
-  background-color: #e9f5fa;
-  border-left: 2px solid #2d96bd;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+}
+.post-content blockquote::before {
+  position: absolute;
+  left: -32px;
+  top: -10px;
+  content: '“';
+  font-family: fantasy;
+  font-size: 40px;
+  color: #673ab7;
+  color: var(--primary, #673ab7);
 }
 .post-content blockquote p {
   margin: 0;
